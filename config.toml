@@ -1,29 +1,52 @@
-languageCode = "en-us"
-title = "Usman Akhtar "
+baseurl = "https://github.com/usmanakhtar/username1.github.io.git"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
+title = "Usman Akhtar"
+copyright = "&copy; 2017 Your Name"
 theme = "academic"
+enableEmoji = true
+footnotereturnlinkcontents = "<sup>^</sup>"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+paginate = 10
 
-post = "/:year/:month/:day/:slug"
-baseURL = "https://usmanakhtar.github.io/username.github.io/"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
 
-copyright = "&copy; 2017 Usman Akhtar"
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = ""
 
-# Navigation Links
-#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
-#     desired widget in your `content/home/` folder.
-#   The weight parameter defines the order that the links will appear in.
+# Default language to use (if you setup multilingual support)
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+[outputs]
+  home = [ "HTML", "CSS" ]
+
+[blackfriday]
+  hrefTargetBlank = true
 
 [params]
-  name = "Usman Akhtar"
-  role = "Phd Student in Computer Science and Engineering"
-  organization = "Kyung Hee University"
-  organization_url = ""
-  avatar = "usman.jpg"
- email = "usman@oslab.khu.ac.kr"
- #address = "Room 206, Dept. of Computer Engineering, Kyung Hee University
-#Seocheon-dong, Giheung-gu, Yongin-si, Gyeonggi-do, 446-701, South Korea"
-  #office_hours = "Monday 10:00 to 13:00 or email for appointment"
-  phone = "+821031308894"
-  #skype = "echo123"
+  # Color theme.
+  #   Choose from `default`, `ocean`, `forest`, or `coffee`.
+  color_theme = "default"
+
+  # Font style.
+  #   Choose from `default`, `classic`, or `playfair`.
+  font = "default"
+
+  # Your details.
+  name = "Lena Smith"
+  role = "Professor of Artificial Intelligence"
+
+  # Organizations/Affiliations.
+  #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
+  organizations = [ { name = "Stanford University", url = "" } ]
+
+  gravatar = false  # Get your avatar from Gravatar.com? (true/false)
+  avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  email = "test@example.org"
+  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+  office_hours = "Monday 10:00 to 13:00 or email for appointment"
+  phone = "888 888 88 88"
+  skype = "echo123"
   telegram = ""
 
   # Enable Keybase in Contact section by entering your keybase.io username.
@@ -31,11 +54,54 @@ copyright = "&copy; 2017 Usman Akhtar"
 
   # Date format (refer to Go's date format: http://flippinggodateformat.com )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "Mon, Jan 2, 2006"
+  date_format = "Jan 2, 2006"
+
+  # Show estimated reading time for posts?
+  reading_time = true
 
   # Enable global LaTeX math rendering?
   #   If false, you can enable it locally on a per page basis.
   math = false
+
+  # Highlight.js options
+  #   highlight
+  #     Enable global source code highlighting?  If false, you can
+  #     override it for a particular page in that page's preamble.
+  #
+  #     Example: highlight = true
+  #
+  #   highlight_languages
+  #     Add support for highlighting additional languages. Support for
+  #     languages mentioned here will be included in all pages. You
+  #     can also set this variable for a particular page in that
+  #     page's preamble.
+  #
+  #     Example: highlight_languages = ["go", "lisp", "ocaml"]
+  #
+  #   highlight_style
+  #     Choose a different CSS style for highlighting source
+  #     code. Setting this option in a page's preamble has no
+  #     effect.
+  #
+  #     Example: highlight_style = "github-gist"
+  #
+  #   For the list of supported languages and styles, see:
+  #   https://cdnjs.com/libraries/highlight.js/
+  #
+  #   For more info on the highlighting options, see:
+  #   https://sourcethemes.com/academic/post/writing-markdown-latex/#highlighting-options
+  highlight = true
+  highlight_languages = []
+  # highlight_style = "github"
+
+  # Enable native social sharing buttons?
+  sharing = true
+
+  # Link custom CSS and JS assets
+  #   (relative to /static/css and /static/js respectively)
+  custom_css = []
+  custom_js  = []
+
   # Publication types.
   #   Used to categorize publications.
   #   The index of the publication type in the list is used as its unique numerical identifier.
@@ -60,7 +126,7 @@ copyright = "&copy; 2017 Usman Akhtar"
   #   youtube, instagram, soundcloud
   #
   #   For email icon, use "fa" icon pack, "envelope" icon, and
-  #   "usman@oslab.khu.ac.kr" as the link.
+  #   "mailto:your@email.com" as the link.
   #
   #   Full list: https://fortawesome.github.io/Font-Awesome/icons/
   #
@@ -73,7 +139,7 @@ copyright = "&copy; 2017 Usman Akhtar"
   [[params.social]]
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:usman@oslab.khu.ac.kr"
+    link = "mailto:test@example.org"
 
   [[params.social]]
     icon = "twitter"
@@ -90,8 +156,14 @@ copyright = "&copy; 2017 Usman Akhtar"
     icon_pack = "fa"
     link = "//github.com/gcushen"
 
-[[menu.main]] 
- name = "Home"
+
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+[[menu.main]]
+  name = "Home"
   url = "#about"
   weight = 1
 
@@ -100,7 +172,7 @@ copyright = "&copy; 2017 Usman Akhtar"
   url = "#publications_selected"
   weight = 2
 
-  [[menu.main]]
+[[menu.main]]
   name = "Posts"
   url = "#posts"
   weight = 3
@@ -120,7 +192,6 @@ copyright = "&copy; 2017 Usman Akhtar"
   url = "#contact"
   weight = 6
 
-
 # Taxonomies.
 [taxonomies]
   tag = "tags"
@@ -131,5 +202,5 @@ copyright = "&copy; 2017 Usman Akhtar"
 #   Create a [languages.X] block for each language you want, where X is the language ID.
 
 # Configure the English version of the website.
-[languages.en]
+[Languages.en]
   languageCode = "en-us"
